@@ -1,0 +1,41 @@
+body{
+  text-align: center;
+}
+
+.grid-title{
+  font-size: 45px;
+  color: #432a7f;
+}
+
+.grid-min-max{
+  font-size: 31px;
+  color: #00bcd4;
+}
+
+.grid-text{
+  color: white;
+  text-align: start;
+  width: max-content;
+  background-color: #54145f;
+  border-radius: 25px;
+  margin: 18px auto;
+  font-size: 22px;
+  padding: 15px;
+}
+
+
+.container{
+  border: 5px solid #e1bee7;
+  background-color: #fff1ff;
+  display: grid;
+  /* con minmax se declara la medida minima y maxima que puede tener el elemento */
+  grid-template-columns: minmax(30px, 300px) 200px minmax(60px, 250px);
+  /* con repeat se puede declarar las dimenciones del elemento que se repiten */
+  /* declarando con auto las dimenciones se ajusta con relecion del contenido del elemonto */
+  grid-template-rows: repeat(3, auto);
+}
+
+.item{
+  border: 3px solid #00bcd4;
+  font-size: 2rem;
+}

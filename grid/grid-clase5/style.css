@@ -1,0 +1,69 @@
+body{
+  text-align: center;
+}
+
+.grid-title{
+  font-size: 47px;
+  color: #0d7109;
+}
+
+.grid-title-2{
+  font-size: 29px;
+  color: #e1ab06;
+}
+
+.grid-text{
+  width: max-content;
+  color: #084906;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 19px;
+  margin: 15px auto;
+  background-color: #00bbd424;
+  text-align: start;
+}
+
+
+
+
+.container{ 
+  margin: 15px auto;
+  border: 5px solid #e1bee7;
+  background-color: #fff1ff;
+  display: grid;
+
+  /* con la fr (fraccion) se fracciona el espacio del elemento con las dimenciones definidas*/
+  /* con min-content toma las dimenciones del elemento contenido manteniendo la dimencion minima para contenerlo*/
+  /* con max-content toma las dimenciones del elemento contenido usa la dimencion maxima para contenerlo en una sola linea */
+  grid-template-columns: 1fr 3fr min-content max-content;
+  
+}
+
+.item{
+  border: 2px solid #00bcd4;
+  font-size: 2rem;
+}
+
+/* para  renderisar con auto-fit y auto-fill es necesario usar un minmax para dar las dimenciones
+es aconsejable usar uns dimencion en fr para que el elmento se ajuste a las dimenciones del ancho completo.
+al reducirse la dimencion y llegar a la dinecion minima crea una nueva linea inferior hasta llegar ala dimencion minima definida*/
+
+/*con auto-fit el elemento crese para completar el espacion disponible */
+/*con auto-fill se crean celdas fantasmas para mantener la dimencion definida*/
+
+.container-2{
+  margin: 15px auto;
+  border: 5px solid #e1bee7;
+  background-color: #fff1ff;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
+}
+
+.container-3{
+  margin: 15px auto;
+  border: 5px solid #e1bee7;
+  background-color: #fff1ff;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+}

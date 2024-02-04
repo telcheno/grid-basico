@@ -1,0 +1,39 @@
+body{
+    text-align: center;
+}
+
+
+.grid-title{
+    font-size: 45px;
+    color: #387d83;
+}
+
+.grid-text{
+    text-align: start;
+    width: max-content;
+    margin: 20px auto;
+    border-radius: 15px;
+    padding: 35px;
+    font-size: 24px;
+    color: #117e8d;
+    background-color: #dcc5f47c;
+}
+
+.container{
+    border: 5px solid #a05ee7;
+    background-color: #5ff1ff;
+    display: grid;
+    gap: 7px;
+    grid-template-columns: 55px 55px 55px;
+    grid-auto-rows: 55px;
+    height: 200px;
+    justify-content: center;/*Se renderiza en sentido horizontal*/
+    align-content: end;/*Se renderiza en sentido vertical*/
+    place-content: end start; /*Se renderiza sea en sentido horizontal y vertical respactivamente al valor indicado*/
+
+}
+
+.item{
+    border: 2px solid #00bcd4;
+    font-size: 2rem;
+}

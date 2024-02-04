@@ -1,0 +1,78 @@
+body{
+    text-align: center;
+}
+
+.grid-title{
+    font-size: 40px;
+    color: #a05fff;
+}
+
+.grid-title-h2{
+    font-size: 35px;
+    color: #4a8b9e;
+}
+
+.section-text{
+    font-size: 20px;
+    text-align: start;
+    width: max-content;
+    padding: 15px;
+    border-radius: 25px;
+    color: rgb(35, 118, 78);
+    margin: 5px auto;
+    background-color: #f6e0f69d;
+}
+
+.container{
+    margin: 25px;
+    border: 5px solid #e1bee7;
+    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: repeat(3, 105px);
+    /* la declaracion de grid-template-area va con commillas */
+    grid-template-areas: 
+    "header header header"
+    "side main main"
+    "side main main"
+    "side main main"
+    "footer footer footer"  
+    ;
+    place-content: center;
+}
+
+.item{
+    font-size: 3rem;
+    border: 1px solid #a05fff;
+    
+}
+
+.box1{
+    background-color: #ffeeff;
+    /* grid-column-start: 1;
+    grid-column-end: -1; */
+    /* la declaracion de grid-area no va con comillas */
+    grid-area: header;
+}
+.box2{
+    background-color: #fff1ff;
+    /* grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: -1; */
+    grid-area: side;
+}
+.box3{
+    background-color: #e5ffff;
+    /* con grid area usa las coordenadas empiensa con las lineas / columnas donde empiesa el elemento y termina siempre con las mismas coordenadas */
+    /* grid-area: 2 / 3 / 7 / 6; */
+    grid-area: main;
+}
+
+.box4{
+    background-color: #fa5bd5;
+    /* grid-column-start: 1;
+    grid-column-end: -1; */
+    grid-area: footer;
+}
+

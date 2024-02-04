@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Css Grid Clase3</title>
+</head>
+<body>
+    <h1 class="grid-title">Grid Basico</h1>
+    <h2 class="grid-title-h2">Grid area</h2>
+
+    <section class="section-text">
+        <p class="grid-text">.container{<br>
+            display: grid;<br>
+            grid-template-columns: repeat(3, 100px);<br>
+            grid-template-rows: repeat(3, 75px);<br>
+            grid-template-areas: <br>
+            "header header header"<br>
+            "side main main"<br>
+            "side main main"<br>
+            "side main main"<br>
+            "footer footer footer";<br>
+            place-content: center;}</p>
+    </section >
+    <section class="section-text">
+    <p class="grid-text">
+        .item{<br>
+            font-size: 3rem;<br>
+            border: 2px solid #a05fff;<br>
+            
+        }<br>
+        <br>
+        .box1{<br>
+            background-color: #ffeeff;<br>
+            /* grid-column-start: 1;<br>
+            grid-column-end: -1; */<br>
+            /* la declaracion de grid-area no va con comillas */<br>
+            grid-area: header;<br>
+        }
+        .box2{<br>
+            background-color: #fff1ff;<br>
+            /* grid-column-start: 1;<br>
+            grid-column-end: 3;<br>
+            grid-row-start: 2;<br>
+            grid-row-end: -1; */<br>
+            grid-area: side;<br>
+        } <br>
+        .box3{ <br>
+            background-color: #e5ffff; <br>
+            /* con grid area usa las coordenadas empiensa con las lineas "/" <br>
+             columnas donde empiesa el elemento y termina siempre con las mismas coordenadas */ <br>
+            /* grid-area: 2 / 3 / 7 / 6; */ <br>
+            grid-area: main; <br>
+        } <br>
+        <br>
+        .box4{ <br>
+            background-color: #fa5bd5; <br>
+            /* grid-column-start: 1; <br>
+            grid-column-end: -1; */ <br>
+            grid-area: footer; <br>
+        } <br>
+    </p>
+</section >
+
+    </section>
+    <section class="container">
+        <div class="item box1">1</div>
+        <div class="item box2">2</div>
+        <div class="item box3">3</div>
+        <div class="item box4">4</div>
+    </section>
+</body>
+</html>

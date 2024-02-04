@@ -1,0 +1,134 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* va renderisado el contenedor con grid para crear la grilla */
+.hero{
+  display: grid;
+  /* para hacer responsivo se puede dar un minmax en el elemento que se quiere controlar sus dimenciones */
+  grid-template-columns: minmax(300px, 2fr) 3fr;
+  grid-auto-rows: 550px;
+  border-bottom: 1px solid #ddd;
+}
+
+.hero-image{
+  /* object-fit agusta la dimencion al contenedor y mantiene en su totalidad el elemento contenido */
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.info{
+  /* align-self alinea a si mismo el elemento */
+  align-self: center;
+}
+
+.info-title{
+  color: #333;
+  font-size: 3rem;
+  font-weight: bolder;
+  margin-bottom: 24px;
+}
+
+.info-subtitle{
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+}
+
+.info-button{
+  border: none;
+  border-radius: 20px;
+  color: #333;
+  background-color: #fd8c00;
+  font-weight: bolder;
+  padding: 12px 24px;
+}
+
+.dishes{
+  margin: 100px 0;
+
+}
+
+.dishes-title{
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2rem;
+}
+
+/* el contenedor con display grid define cuantas columnas y con grid-auto-row define automaticamente las dimenciones de las filas */
+.dishes-grid{
+  display: grid;
+  /* con auto-fit al llegar a la dimencion indicada crea una nueva fila y mueve los elementosen la linea creada debajo */
+  grid-template-columns: repeat(auto-fit, minmax(100px, 250px));
+  grid-auto-rows: 1fr;
+  gap: 25px;
+  justify-content: center;
+}
+
+.dishes-item{
+  width: 100%;
+  height: 100%;
+  /*con object-fit: cover; se renderiza el contenido del elemento que cubre el entero contenedor*/
+  object-fit: cover;
+}
+
+.dishes-item__big{
+  /* esta es una de las opciones para renderizar el elemento con columnas y lines 
+  grid-column: 1 / 3;
+  grid-row: 1 / 3; */
+  /* en la siguiente opcion se renderiza linea columna / linea fila (inicion) / linea columna / linea fila (fin)  */
+  grid-area: 1 / 1 / 3 / 3;
+}
+
+.menu{
+  margin-bottom: 200px;
+}
+
+.menu-title{
+  font-size: 2rem;
+  color: #333;
+  font-weight: bolder;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.menu-grid{
+  display: grid;
+  gap: 25px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, 150px);
+}
+
+.menu-grid-item{
+  background-color: coral;
+  padding: 15px;
+  border-top-left-radius: 40px;
+}
+
+.menu-grid-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+@media screen and (max-width: 768px) {
+  .hero{
+    grid-template-columns: minmax(300px, 500px);
+    justify-content: center;
+  }
+  .hero-image{
+    display: none;
+  }
+  .dishes-grid{
+  grid-template-columns: repeat(auto-fit, minmax(75px, 100px));
+
+  }
+}

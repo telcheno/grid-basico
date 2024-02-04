@@ -1,0 +1,42 @@
+body{
+    text-align: center;
+}
+
+.grid-title{
+    font-size: 45px;
+    color: #00bcd4;
+}
+
+.grid-text{
+    text-align: start;
+    width: fit-content;
+    margin: 20px auto;
+    border-radius: 15px;
+    padding: 35px;
+    font-size: 24px;
+    color: #117e8d;
+    background-color: #f2baf29d;
+}
+
+.container{
+    border: 3px solid #e10ee7;
+    background-color: #ffe5ff;
+    display: grid;
+    /* grid-template-columns: 50px 75px 150px; */
+    grid-template-rows: 75px 120px;
+    /* grid-template-rows: 55px 85px; */
+    grid-auto-columns: 45px 85px 125px; /* Crea las columnas enorden vertical y crea las columnas con la dimencion indicada*/
+    /* grid-auto-rows: 65px; */
+    grid-auto-flow: column; /*LLena los espacios disponibles en vez de crear nuevas lineas*/
+    row-gap: 10px; /*Crea espacio entre las filas con la dimencion indicada*/
+    column-gap: 15px; /* Crea espacios entre las columnas con la dimencion indicada*/
+    gap: 30px; /* Crea espacios entre los elementos con la dimencion indicada*/
+    
+
+}
+
+.item{
+    border: 2px solid #00bcd4;
+    border-radius: 10px;
+    font-size: 25px;
+}
